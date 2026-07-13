@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BillOS — Smart Billing for Local Retail</title>
+<meta name="description" content="BillOS is a mobile-first POS and billing platform built for local retail and grocery shop owners." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark">///</span>
+      <span class="brand-name">BillOS</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#product">Product</a>
+      <a href="#roles">Roles</a>
+      <a href="#tenant">Multi-Shop</a>
+    </nav>
+    <a href="#cta" class="nav-cta">Get a Demo</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="receipt-tag">SOFTWARE PRESENTATION · NO. 0001</div>
+    <h1>One app runs<br>the whole shop counter.</h1>
+    <p class="hero-sub">BillOS is a mobile-first POS and billing platform built for local retail and grocery shop owners — billing on the phone, control from the desk.</p>
+    <div class="hero-cta-row">
+      <a href="#product" class="btn btn-primary">See the UI Walkthrough</a>
+      <a href="#cta" class="btn btn-ghost">Request Access</a>
+    </div>
+  </div>
+  <div class="receipt-strip" aria-hidden="true">
+    <div class="tear tear-top"></div>
+    <div class="receipt-lines">
+      <div class="rline"><span>DAILY SALES</span><span class="dots"></span><span>৳ 8,420</span></div>
+      <div class="rline"><span>ITEMS SOLD</span><span class="dots"></span><span>134</span></div>
+      <div class="rline"><span>WEIGHTED ITEMS</span><span class="dots"></span><span>ACTIVE</span></div>
+      <div class="rline"><span>LOW STOCK ALERTS</span><span class="dots"></span><span>3</span></div>
+      <div class="rline"><span>ROLE</span><span class="dots"></span><span>OWNER</span></div>
+    </div>
+    <div class="tear tear-bottom"></div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="section">
+  <div class="section-inner">
+    <div class="eyebrow">01 — THE PROBLEM</div>
+    <h2>Local shops run on memory and paper.</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="pc-mark">✕</span>
+        <p>Manual paper billing is slow and error-prone</p>
+      </div>
+      <div class="problem-card">
+        <span class="pc-mark">✕</span>
+        <p>No real-time inventory visibility</p>
+      </div>
+      <div class="problem-card">
+        <span class="pc-mark">✕</span>
+        <p>No role-based control over staff actions</p>
+      </div>
+      <div class="problem-card">
+        <span class="pc-mark">✕</span>
+        <p>Weighted items like rice or vegetables are hard to track</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT / DEVICE TOGGLE -->
+<section id="product" class="section section-dark">
+  <div class="section-inner">
+    <div class="eyebrow eyebrow-light">02 — THE PRODUCT</div>
+    <h2 class="h-light">Built for two screens, one shop.</h2>
+    <p class="section-sub">Billing moves fast on the phone. Control lives on the desk. Tap through both below — every screen shows what happens when you click it.</p>
+
+    <div class="device-toggle" role="tablist" aria-label="Platform selector">
+      <button class="toggle-btn active" data-target="mobile" role="tab" aria-selected="true">Mobile</button>
+      <button class="toggle-btn" data-target="pc" role="tab" aria-selected="false">PC / Desktop</button>
+    </div>
+
+    <!-- MOBILE VIEWS -->
+    <div class="platform-panel" id="panel-mobile">
+      <div class="mock-row">
+
+        <!-- Mobile 1: Home -->
+        <div class="mock-block">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen glass">
+              <div class="app-topbar">BillOS <span class="dot-live"></span></div>
+              <div class="glass-card hotspot" data-tip="Opens the new sale screen">
+                <span class="gc-label">TODAY'S SALES</span>
+                <span class="gc-value">৳ 8,420</span>
+              </div>
+              <div class="glass-card hotspot" data-tip="Opens the stock list">
+                <span class="gc-label">ITEMS SOLD</span>
+                <span class="gc-value">134</span>
+              </div>
+              <div class="glass-card alert hotspot" data-tip="Jumps straight to low-stock items">
+                <span class="gc-label">STOCK ALERT</span>
+                <span class="gc-value">3 items low</span>
+              </div>
+              <div class="app-tabbar">
+                <span class="tab active">Home</span>
+                <span class="tab">Billing</span>
+                <span class="tab">Inventory</span>
+                <span class="tab">Reports</span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-caption">
+            <h4>Home Screen</h4>
+            <p>Glassmorphism cards surface today's sales, items sold, and stock alerts at a glance.</p>
+            <p class="tap-hint">↑ Tap a card to see its click-flow</p>
+          </div>
+        </div>
+
+        <!-- Mobile 2: Billing -->
+        <div class="mock-block">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-topbar">New Sale</div>
+              <div class="search-bar">Search product…</div>
+              <div class="product-row hotspot" data-tip="Adds item to cart instantly">
+                <span>Rice — 5kg bag</span><span class="tag">+ ADD</span>
+              </div>
+              <div class="product-row hotspot" data-tip="Switches to weighted entry with numeric keypad">
+                <span>Loose Vegetables</span><span class="tag weight">⚖ WEIGHT</span>
+              </div>
+              <div class="product-row hotspot" data-tip="Adds item to cart instantly">
+                <span>Cooking Oil 1L</span><span class="tag">+ ADD</span>
+              </div>
+              <div class="running-total hotspot" data-tip="Generates a PDF invoice and opens the share sheet">
+                <span>TOTAL</span><span>৳ 640</span>
+                <span class="gen-btn">GENERATE INVOICE</span>
+              </div>
+            </div>
+          </div>
+          <div class="mock-caption">
+            <h4>Billing Screen</h4>
+            <p>Weighted items toggle straight into a numeric keypad — no separate scale app needed.</p>
+            <p class="tap-hint">↑ Tap a row to see its click-flow</p>
+          </div>
+        </div>
+
+        <!-- Mobile 3: Inventory -->
+        <div class="mock-block">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-topbar">Inventory <span class="filter-icon hotspot" data-tip="Sort by category or stock level">▾</span></div>
+              <div class="search-bar">Search stock…</div>
+              <div class="product-row hotspot" data-tip="Opens detail view with edit-stock option">
+                <span>Basmati Rice</span><span class="tag ok">42 pcs</span>
+              </div>
+              <div class="product-row hotspot" data-tip="Opens detail view with edit-stock option">
+                <span>Mustard Oil</span><span class="tag low">6 pcs — LOW</span>
+              </div>
+              <div class="product-row hotspot" data-tip="Opens detail view with edit-stock option">
+                <span>Red Lentils</span><span class="tag ok">88 pcs</span>
+              </div>
+              <div class="fab hotspot" data-tip="Opens the new product form">+</div>
+            </div>
+          </div>
+          <div class="mock-caption">
+            <h4>Inventory Screen</h4>
+            <p>Low-stock tags surface automatically so restocking never gets forgotten.</p>
+            <p class="tap-hint">↑ Tap a row to see its click-flow</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PC VIEWS -->
+    <div class="platform-panel" id="panel-pc" style="display:none;">
+      <div class="mock-row mock-row-pc">
+
+        <div class="mock-block mock-block-wide">
+          <div class="pc-frame">
+            <div class="pc-topbar"><span></span><span></span><span></span></div>
+            <div class="pc-body">
+              <div class="pc-sidebar">
+                <div class="pc-nav-item hotspot" data-tip="Switches the main panel to Sales">Sales</div>
+                <div class="pc-nav-item active hotspot" data-tip="Switches the main panel to Inventory">Inventory</div>
+                <div class="pc-nav-item hotspot" data-tip="Opens the team list and role assignment">Staff</div>
+                <div class="pc-nav-item hotspot" data-tip="Switches the main panel to Reports">Reports</div>
+                <div class="pc-nav-item hotspot" data-tip="Opens account and role settings">Settings</div>
+              </div>
+              <div class="pc-main">
+                <div class="pc-chart hotspot" data-tip="Drills down into that specific data segment">
+                  <div class="bar" style="height:40%"></div>
+                  <div class="bar" style="height:70%"></div>
+                  <div class="bar" style="height:55%"></div>
+                  <div class="bar" style="height:90%"></div>
+                  <div class="bar" style="height:65%"></div>
+                </div>
+                <div class="pc-stats">
+                  <div class="stat">Monthly Revenue<br><b>৳ 2,14,300</b></div>
+                  <div class="stat">Active Shops<br><b>3</b></div>
+                  <div class="stat hotspot" data-tip="Opens account and role settings">Profile ▾</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mock-caption">
+            <h4>Admin Dashboard</h4>
+            <p>Sidebar navigation plus performance charts — click any segment or nav item to see what it opens.</p>
+            <p class="tap-hint">↑ Tap the sidebar or chart to see its click-flow</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="click-flow-readout" id="clickReadout">
+      <span class="cf-label">CLICK FLOW</span>
+      <span class="cf-text">Tap any highlighted element above to preview what happens next.</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ROLES -->
+<section id="roles" class="section">
+  <div class="section-inner">
+    <div class="eyebrow">03 — ACCESS CONTROL</div>
+    <h2>Three tiers. One rulebook.</h2>
+    <div class="role-grid">
+      <div class="role-card">
+        <span class="role-tier">TIER 01</span>
+        <h3>Authority</h3>
+        <p>Full control across every shop in the account. Switches between dashboards, manages every role.</p>
+      </div>
+      <div class="role-card">
+        <span class="role-tier">TIER 02</span>
+        <h3>Owner</h3>
+        <p>Full control within their own shop — sales, inventory, staff, and reports for that location only.</p>
+      </div>
+      <div class="role-card">
+        <span class="role-tier">TIER 03</span>
+        <h3>Sales Executive</h3>
+        <p>Billing access only. No settings, no reports — built for speed at the counter.</p>
+      </div>
+    </div>
+    <p class="role-note">Clicking a staff name opens the role dropdown — selecting a new tier updates permissions across the app instantly, no re-login needed.</p>
+  </div>
+</section>
+
+<!-- INVOICE FLOW -->
+<section class="section section-receipt">
+  <div class="section-inner">
+    <div class="eyebrow">04 — INVOICE & PDF</div>
+    <h2>Cart to customer, in three taps.</h2>
+    <div class="flow-steps">
+      <div class="flow-step"><span class="fs-num">1</span><p>Confirm Payment — locks the sale, weighted items already calculated</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><span class="fs-num">2</span><p>Generate PDF — a formatted invoice is created instantly</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><span class="fs-num">3</span><p>Share — send via WhatsApp, SMS, or straight to a printer</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MULTI TENANT -->
+<section id="tenant" class="section section-dark">
+  <div class="section-inner">
+    <div class="eyebrow eyebrow-light">05 — MULTI-SHOP</div>
+    <h2 class="h-light">One platform. Many shops.</h2>
+    <p class="section-sub">Each shop keeps its own isolated data. Authority-level accounts switch between dashboards with a single click, and onboarding a new location takes one more.</p>
+    <div class="shop-switcher">
+      <div class="shop-pill active">Shopping Bag — Chatteshwari Rd</div>
+      <div class="shop-pill">Shop 02</div>
+      <div class="shop-pill">Shop 03</div>
+      <div class="shop-pill add">+ Add New Shop</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section cta-section">
+  <div class="section-inner cta-inner">
+    <div class="receipt-tag">END OF RECEIPT</div>
+    <h2>Built for the way local shops actually work.</h2>
+    <p class="section-sub">Mobile speed for daily billing. Desktop power for management. Simple enough for any sales executive to use on day one.</p>
+    <a href="mailto:hello@billos.app" class="btn btn-primary btn-large">Request Access</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>BillOS — built by Araf</span>
+    <span class="footer-dash">///</span>
+    <span>Chattogram, Bangladesh</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
